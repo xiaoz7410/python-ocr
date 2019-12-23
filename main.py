@@ -1,11 +1,11 @@
+import configparser
+import time
+
 import keyboard  # 监听键盘
 import pynput
-from PIL import ImageGrab  # 截图、读取图片、保存图片
-import time
-from aip import AipOcr
 import pyperclip as clip
-import configparser
-import pyautogui as gui
+from PIL import ImageGrab  # 截图、读取图片、保存图片
+from aip import AipOcr
 
 
 def get_config(name):
@@ -57,6 +57,5 @@ if __name__ == '__main__':
     }
 
     print('程序启动成功')
-
     with pynput.keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
         listener.join()
